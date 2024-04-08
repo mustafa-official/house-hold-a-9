@@ -2,7 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import defaultUser from "../../assets/user-one.jpg"
+import defaultUser from "../../assets/user-one.jpg";
 const Navbar = () => {
   const { logOutUser, user } = useContext(AuthContext);
   console.log(user);
@@ -37,7 +37,7 @@ const Navbar = () => {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? "border border-[#23BE0A] rounded-md text-[#23BE0A] font-bold"
+                      ? "border border-secondary rounded-md text-secondary font-bold"
                       : ""
                   }
                 >
@@ -48,7 +48,7 @@ const Navbar = () => {
                   to="/profile"
                   className={({ isActive }) =>
                     isActive
-                      ? "border border-[#23BE0A] px-3 rounded-md text-[#23BE0A] font-bold"
+                      ? "border border-secondary rounded-md text-secondary font-bold"
                       : ""
                   }
                 >
@@ -59,7 +59,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/" className="text-xl lg:text-3xl font-bold">
-            House Hold
+            House <span className="text-secondary">Hold</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -70,7 +70,7 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "border border-[#23BE0A] rounded-md text-[#23BE0A] font-bold"
+                    ? "border border-secondary rounded-md text-secondary font-bold"
                     : ""
                 }
               >
@@ -81,7 +81,7 @@ const Navbar = () => {
                 to="/profile"
                 className={({ isActive }) =>
                   isActive
-                    ? "border border-[#23BE0A] px-3 rounded-md text-[#23BE0A] font-bold"
+                    ? "border border-secondary rounded-md text-secondary font-bold"
                     : ""
                 }
               >
@@ -92,20 +92,23 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div className="hidden items-center gap-5 lg:flex">
+            <div className="avatar">
+              <div
+                className={`w-9 rounded-full ring hover:ring-[#23BE0A] ring-offset-base-100 ring-offset-2`}
+              >
+                <img
+                  title={user && user.displayName}
+                  src={user ? user.photoURL : defaultUser}
+                  alt=""
+                />
+              </div>
+            </div>
             {user ? (
               <>
-                <div className="avatar">
-                  <div className={`w-9 rounded-full ring hover:ring-[#23BE0A] ring-offset-base-100 ring-offset-2`}>
-                    {
-                      user && <img title={user.displayName} src={user.photoURL ? user.photoURL : "nai"} />
-                    }
-                  </div>
-                </div>
-
                 <Button
+                  className="bg-secondary"
                   onClick={logOutUser}
                   style={{
-                    backgroundColor: "#23BE0A",
                     textTransform: "capitalize",
                     fontSize: "16px",
                   }}
@@ -118,8 +121,8 @@ const Navbar = () => {
               <>
                 <Link to="/login">
                   <Button
+                    className="bg-secondary"
                     style={{
-                      backgroundColor: "#23BE0A",
                       textTransform: "capitalize",
                       fontSize: "16px",
                     }}
