@@ -5,6 +5,7 @@ import Profile from "../pages/Profile/Profile";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import ViewDetails from "../pages/Home/ViewDetails/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -14,19 +15,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/profile",
-        element: <Profile></Profile>
+        element: <Profile></Profile>,
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
+      },
+      {
+        path: "/view-details/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: () => fetch("/data.json"),
       }
     ],
   },

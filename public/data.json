@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Single-family Home",
+      "segment_name": "Residential",
+      "description": "This spacious single-family home offers comfortable living with modern amenities. Featuring a large backyard and cozy interior.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "123 Main Street, Cityville, USA",
+      "facilities": ["living room", "backyard", "kitchen", "garage"],
+      "image": "https://i.ibb.co/NWXFg0H/single-family.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Deluxe Villa",
+      "segment_name": "Residential",
+      "description": "Experience deluxe living in this stunning villa. With spacious rooms, beautiful landscaping, and a private pool.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "456 Park Avenue, Townsville, USA",
+      "facilities": ["living room", "swimming pool", "garden", "gym"],
+      "image": "https://i.ibb.co/6yv4QCF/town-house.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Apartment",
+      "segment_name": "Residential",
+      "description": "This charming apartment is perfect for urban living. Close to amenities and public transportation.",
+      "price": "$2,000/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "789 Elm Street, Metropolis, USA",
+      "facilities": ["living room", "balcony", "laundry room"],
+      "image": "https://i.ibb.co/314Xsjs/apertments.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Student Housing",
+      "segment_name": "Residential",
+      "description": "Student-friendly housing with amenities geared towards the college lifestyle. Close to campus and entertainment.",
+      "price": "$800/month (per bed)",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "555 University Avenue, Collegtown, USA",
+      "facilities": ["living room", "study area", "fitness center", "game room"],
+      "image": "https://i.ibb.co/fGQTpK1/student-housing.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Residential",
+      "description": "A community designed for seniors, offering independent living with supportive services. Peaceful surroundings and social activities.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "777 Oak Street, Eldertown, USA",
+      "facilities": ["living room", "dining area", "library", "garden"],
+      "image": "https://i.ibb.co/30431Ks/senior.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Vacation Rental",
+      "segment_name": "Residential",
+      "description": "Escape to this vacation rental for a relaxing getaway. Fully furnished and equipped for your comfort.",
+      "price": "$250/night",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "888 Beach Road, Seaside Village, USA",
+      "facilities": ["living room", "patio", "beach access", "barbecue area"],
+      "image": "https://i.ibb.co/VtjSPPK/vocation.jpg"
+    }
+  ]
+  
