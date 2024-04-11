@@ -4,8 +4,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import defaultUser from "../../assets/user-one.jpg";
 const Navbar = () => {
-  const { logOutUser, user } = useContext(AuthContext);
-  console.log(user);
+  const { logOutUser, user, loading } = useContext(AuthContext);
+
   return (
     <div>
       <div className="navbar container px-0 lg:px-10 mx-auto mt-5">
@@ -43,30 +43,38 @@ const Navbar = () => {
                 >
                   Home
                 </NavLink>
-                <NavLink
-                  style={{ padding: "5px 12px" }}
-                  to="/profile"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "border border-secondary rounded-md text-secondary font-bold"
-                      : ""
-                  }
-                >
-                  Profile
-                </NavLink>
                 {user && (
-                <NavLink
-                  style={{ padding: "5px 12px" }}
-                  to="/book-now"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "border border-secondary rounded-md text-secondary font-bold"
-                      : ""
-                  }
-                >
-                  Book Now
-                </NavLink>
-              )}
+                  <NavLink
+                    style={{ padding: "5px 12px" }}
+                    to="/profile"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "border border-secondary rounded-md text-secondary font-bold"
+                        : ""
+                    }
+                  >
+                    Update Profile
+                  </NavLink>
+                )}
+                {loading ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  <>
+                    {user && (
+                      <NavLink
+                        style={{ padding: "5px 12px" }}
+                        to="/book-now"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "border border-secondary rounded-md text-secondary font-bold"
+                            : ""
+                        }
+                      >
+                        Book Now
+                      </NavLink>
+                    )}
+                  </>
+                )}
               </div>
             </ul>
           </div>
@@ -89,77 +97,91 @@ const Navbar = () => {
               >
                 Home
               </NavLink>
-              <NavLink
-                style={{ padding: "5px 12px" }}
-                to="/profile"
-                className={({ isActive }) =>
-                  isActive
-                    ? "border border-secondary rounded-md text-secondary font-bold"
-                    : ""
-                }
-              >
-                Profile
-              </NavLink>
               {user && (
                 <NavLink
                   style={{ padding: "5px 12px" }}
-                  to="/book-now"
+                  to="/profile"
                   className={({ isActive }) =>
                     isActive
                       ? "border border-secondary rounded-md text-secondary font-bold"
                       : ""
                   }
                 >
-                  Book Now
+                  Update Profile
                 </NavLink>
+              )}
+              {loading ? (
+                <span className="loading loading-spinner loading-md"></span>
+              ) : (
+                <>
+                  {user && (
+                    <NavLink
+                      style={{ padding: "5px 12px" }}
+                      to="/book-now"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "border border-secondary rounded-md text-secondary font-bold"
+                          : ""
+                      }
+                    >
+                      Book Now
+                    </NavLink>
+                  )}
+                </>
               )}
             </div>
           </div>
         </div>
         <div className="navbar-end">
-          <div className="hidden items-center gap-5 lg:flex">
-            <div className="avatar">
-              <div
-                className={`w-9 rounded-full ring hover:ring-[#23BE0A] ring-offset-base-100 ring-offset-2`}
-              >
-                <img
-                  title={user && user.displayName}
-                  src={user ? user.photoURL : defaultUser}
-                  alt=""
-                />
-              </div>
-            </div>
-            {user ? (
-              <>
-                <Button
-                  className="bg-secondary"
-                  onClick={logOutUser}
-                  style={{
-                    textTransform: "capitalize",
-                    fontSize: "16px",
-                  }}
-                  size="md"
-                >
-                  Logout
-                </Button>
-              </>
-            ) : (
-              <>
-                <Link to="/login">
+          {loading ? (
+            <span className="loading loading-spinner loading-md"></span>
+          ) : (
+            <div className="hidden items-center gap-5 lg:flex">
+              {user && (
+                <div className="avatar">
+                  <div
+                    className={`w-9 rounded-full ring hover:ring-[#23BE0A] ring-offset-base-100 ring-offset-2`}
+                  >
+                    <img
+                      title={user && user.displayName}
+                      src={user ? user.photoURL : defaultUser}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              )}
+              {user ? (
+                <>
                   <Button
                     className="bg-secondary"
+                    onClick={logOutUser}
                     style={{
                       textTransform: "capitalize",
                       fontSize: "16px",
                     }}
                     size="md"
                   >
-                    Login
+                    Logout
                   </Button>
-                </Link>
-              </>
-            )}
-          </div>
+                </>
+              ) : (
+                <>
+                  <Link to="/login">
+                    <Button
+                      className="bg-secondary"
+                      style={{
+                        textTransform: "capitalize",
+                        fontSize: "16px",
+                      }}
+                      size="md"
+                    >
+                      Login
+                    </Button>
+                  </Link>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
