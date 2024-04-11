@@ -6,6 +6,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ViewDetails from "../pages/Home/ViewDetails/ViewDetails";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import BookNow from "../pages/BookNow/BookNow";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +34,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/view-details/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/book-now",
+        element: <PrivateRoute><BookNow></BookNow></PrivateRoute>
       }
     ],
   },

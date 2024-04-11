@@ -2,14 +2,20 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
       .then((result) => {
+        navigate(location.state ? location.state : "/");
         toast.success("Login Successfully");
         console.log(result.user);
       })
@@ -28,6 +34,9 @@ const Login = () => {
   };
   return (
     <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+      <Helmet>
+      <title>House Hold - Login</title>
+      </Helmet>
       <h1 className="text-2xl font-bold text-center mb-12">Login</h1>
       <form onSubmit={handleLogin} className="space-y-6">
         <div className="space-y-1 text-sm">

@@ -54,6 +54,19 @@ const Navbar = () => {
                 >
                   Profile
                 </NavLink>
+                {user && (
+                <NavLink
+                  style={{ padding: "5px 12px" }}
+                  to="/book-now"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "border border-secondary rounded-md text-secondary font-bold"
+                      : ""
+                  }
+                >
+                  Book Now
+                </NavLink>
+              )}
               </div>
             </ul>
           </div>
@@ -87,6 +100,19 @@ const Navbar = () => {
               >
                 Profile
               </NavLink>
+              {user && (
+                <NavLink
+                  style={{ padding: "5px 12px" }}
+                  to="/book-now"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "border border-secondary rounded-md text-secondary font-bold"
+                      : ""
+                  }
+                >
+                  Book Now
+                </NavLink>
+              )}
             </div>
           </div>
         </div>

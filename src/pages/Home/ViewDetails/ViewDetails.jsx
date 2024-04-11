@@ -4,11 +4,13 @@ import sampleThree from "../../../assets/banner-three.jpg";
 import { useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import 'animate.css';
+import { Helmet } from "react-helmet-async";
 
 const ViewDetails = () => {
   const allData = useLoaderData();
   const [selected, setSelected] = useState({});
   const { id } = useParams();
+
 
   useEffect(() => {
     const filteredData = allData.find((data) => data.id == id);
@@ -33,6 +35,9 @@ const ViewDetails = () => {
 
   return (
     <section className="pt-3 ">
+      <Helmet>
+      <title>House Hold - {`${estate_title}`}</title>
+      </Helmet>
       <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
         <img
           src={image}
@@ -62,7 +67,7 @@ const ViewDetails = () => {
         />
       </div>
 
-      <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:text-left">
+      <div className="flex flex-col justify-center p-6 rounded-sm lg:text-left">
         <h1 className="text-2xl flex items-center font-bold leading-none lg:text-3xl">
           {estate_title} (<p className="text-secondary animate__animated animate__bounce animate__delay-1s">{status}</p>)
         </h1>
@@ -78,7 +83,7 @@ const ViewDetails = () => {
           Location: <span className="font-bold">{location}</span>
         </p>
         <hr className="my-3" />
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
           <h2 className="font-bold">Facilities:</h2>
           {allFacilities.map((facility, idx) => (
             <p

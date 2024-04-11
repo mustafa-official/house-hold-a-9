@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet-async";
 
-const Profile = () => {
+const BookNow = () => {
   return (
     <div>
       <Helmet>
-        <title>House Hold - Profile</title>
+        <title>House Hold - Book Now</title>
       </Helmet>
-      <h2>profile</h2>
+      <h2>book now</h2>
     </div>
   );
 };
 
-export default Profile;
+export default BookNow;

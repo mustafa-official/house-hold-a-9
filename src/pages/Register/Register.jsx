@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
@@ -131,6 +132,9 @@ const Register = () => {
     // </div>
 
     <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+      <Helmet>
+      <title>House Hold - Register</title>
+      </Helmet>
       <h1 className="text-2xl font-bold text-center mb-12">Register</h1>
       <form onSubmit={handleRegister} className="space-y-6">
         <div className="space-y-1 text-sm">
