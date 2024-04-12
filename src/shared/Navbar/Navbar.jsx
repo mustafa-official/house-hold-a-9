@@ -3,12 +3,14 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import defaultUser from "../../assets/user-one.jpg";
+import { Tooltip,  } from "@material-tailwind/react";
+import logo from "../../assets/nav-logo.png";
 const Navbar = () => {
   const { logOutUser, user, loading } = useContext(AuthContext);
 
   return (
     <div>
-      <div className="navbar container px-0 lg:px-10 mx-auto mt-5">
+      <div className="navbar container px-0 lg:px-10 mx-auto md:mt-2">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,8 +81,8 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Link to="/" className="text-xl lg:text-3xl font-bold">
-            House <span className="text-secondary">Hold</span>
+          <Link to="/">
+           <img className="w-20 md:w-28" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -140,20 +142,20 @@ const Navbar = () => {
               {user && (
                 <div className="avatar">
                   <div
-                    className={`w-9 rounded-full ring hover:ring-[#23BE0A] ring-offset-base-100 ring-offset-2`}
+                    className={`w-12 rounded-full`}
                   >
-                    <img
-                      title={user && user.displayName}
-                      src={user ? user.photoURL : defaultUser}
-                      alt=""
-                    />
+                    <Tooltip content={user.displayName} placement="bottom">
+                      <span>
+                        <img src={user ? user.photoURL : defaultUser} alt="" />
+                      </span>
+                    </Tooltip>
                   </div>
                 </div>
               )}
               {user ? (
                 <>
                   <Button
-                    className="bg-secondary"
+                    className="bg-secondary font-grotesk"
                     onClick={logOutUser}
                     style={{
                       textTransform: "capitalize",
@@ -168,7 +170,7 @@ const Navbar = () => {
                 <>
                   <Link to="/login">
                     <Button
-                      className="bg-secondary"
+                      className="bg-secondary font-grotesk"
                       style={{
                         textTransform: "capitalize",
                         fontSize: "16px",

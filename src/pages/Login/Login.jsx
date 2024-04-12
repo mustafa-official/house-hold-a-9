@@ -26,14 +26,16 @@ const Login = () => {
   };
   const handleGoogleLogin = () => {
     googleLogin();
-    // toast.success("Login Successfully");
+    navigate(location.state ? location.state : "/");
+    toast.success("Login Successfully");
   };
   const handleGithubLogin = () => {
     githubLogin();
-    // toast.success("Login Successfully");
+    navigate(location.state ? location.state : "/");
+    toast.success("Login Successfully");
   };
   return (
-    <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+    <div className="w-full mx-auto max-w-md p-8 mt-6 space-y-3 rounded-xl bg-gray-900 text-gray-100">
       <Helmet>
       <title>House Hold - Login</title>
       </Helmet>
@@ -45,7 +47,7 @@ const Login = () => {
             name="email"
             required
             placeholder="Email"
-            className="w-full px-4 py-3 rounded-md border-secondary border bg-gray-900 text-gray-100 focus:border-rose-400"
+            className="w-full px-4 py-3 rounded-md  border bg-gray-900 text-gray-100 "
           />
         </div>
         <div className="space-y-1 text-sm">
@@ -54,7 +56,7 @@ const Login = () => {
             name="password"
             required
             placeholder="Password"
-            className="w-full  px-4 py-3 rounded-md border-secondary border bg-gray-900 text-gray-100 focus:border-rose-400"
+            className="w-full  px-4 py-3 rounded-md  border bg-gray-900 text-gray-100"
           />
           <div className="flex justify-end text-xs text-gray-400">
             <a rel="noopener noreferrer" href="#">
@@ -62,13 +64,13 @@ const Login = () => {
             </a>
           </div>
         </div>
-        <button className="block w-full p-3 text-center rounded-sm  bg-secondary">
+        <button className="block w-full p-3 font-bold text-center rounded-sm  bg-secondary">
           Login
         </button>
       </form>
       <div className="flex items-center pt-4 space-x-1">
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
-        <p className="px-3 text-sm text-gray-400">Login with social accounts</p>
+        <p className="px-3 text-sm text-gray-400">Login with</p>
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
       </div>
       <div className="flex justify-center space-x-4">

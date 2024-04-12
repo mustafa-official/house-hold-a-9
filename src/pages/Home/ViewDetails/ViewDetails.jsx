@@ -22,7 +22,7 @@ const ViewDetails = () => {
   const {
     price,
     estate_title,
-    segment_name,
+
     description,
     status,
     area,

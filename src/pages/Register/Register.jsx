@@ -131,7 +131,7 @@ const Register = () => {
     //   </div>
     // </div>
 
-    <div className="w-full mx-auto max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+    <div className="w-full mx-auto max-w-md p-8 mt-6 space-y-3 rounded-xl bg-gray-900 text-gray-100">
       <Helmet>
       <title>House Hold - Register</title>
       </Helmet>
@@ -143,7 +143,7 @@ const Register = () => {
             name="name"
             required
             placeholder="Name"
-            className="w-full px-4 py-3 rounded-md border-secondary border bg-gray-900 text-gray-100 focus:border-rose-400"
+            className="w-full px-4 py-3 rounded-md  border bg-gray-900 text-gray-100"
           />
         </div>
         <div className="space-y-1 text-sm">
@@ -152,7 +152,7 @@ const Register = () => {
             name="email"
             required
             placeholder="Email"
-            className="w-full px-4 py-3 rounded-md border-secondary border bg-gray-900 text-gray-100 focus:border-rose-400"
+            className="w-full px-4 py-3 rounded-md  border bg-gray-900 text-gray-100"
           />
         </div>
         <div className="space-y-1 text-sm">
@@ -161,7 +161,7 @@ const Register = () => {
             name="photo"
            
             placeholder="Photo URL"
-            className="w-full px-4 py-3 rounded-md border-secondary border bg-gray-900 text-gray-100 focus:border-rose-400"
+            className="w-full px-4 py-3 rounded-md border bg-gray-900 text-gray-100"
           />
         </div>
         <div className="space-y-1 text-sm">
@@ -171,7 +171,7 @@ const Register = () => {
               name="password"
               required
               placeholder="Password"
-              className="w-full  px-4 py-3 rounded-md border-secondary border bg-gray-900 text-gray-100 focus:border-rose-400"
+              className="w-full  px-4 py-3 rounded-md border bg-gray-900 text-gray-100"
             />
             <div className="absolute top-[50%] right-0 translate-x-[-50%] translate-y-[-50%]">
             {showPassword ? (
@@ -188,7 +188,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-        <button className="block w-full p-3 text-center rounded-sm  bg-secondary">
+        <button className="block w-full font-bold p-3 text-center rounded-sm  bg-secondary">
           Register
         </button>
         {error && <small className="text-red-600">{error}</small>}

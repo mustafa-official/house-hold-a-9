@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "estate_title": "Single-family Home",
-      "segment_name": "Residential",
+      "estate_title": "Spacious Family Home",
+      "segment_name": "Single-family Home",
       "description": "This spacious single-family home offers comfortable living with modern amenities. Featuring a large backyard and cozy interior.",
       "price": "$500,000",
       "status": "sale",
@@ -13,8 +13,8 @@
     },
     {
       "id": 2,
-      "estate_title": "Deluxe Villa",
-      "segment_name": "Residential",
+      "estate_title": "Luxurious Villa with Private Pool",
+      "segment_name": "Deluxe Villa",
       "description": "Experience deluxe living in this stunning villa. With spacious rooms, beautiful landscaping, and a private pool.",
       "price": "$1,200,000",
       "status": "sale",
@@ -25,8 +25,8 @@
     },
     {
       "id": 3,
-      "estate_title": "Apartment",
-      "segment_name": "Residential",
+      "estate_title": "Charming Urban Apartment",
+      "segment_name": "Apartment",
       "description": "This charming apartment is perfect for urban living. Close to amenities and public transportation.",
       "price": "$2,000/month",
       "status": "rent",
@@ -37,8 +37,8 @@
     },
     {
       "id": 4,
-      "estate_title": "Student Housing",
-      "segment_name": "Residential",
+      "estate_title": "Student-Friendly Housing Near Campus",
+      "segment_name": "Student Housing",
       "description": "Student-friendly housing with amenities geared towards the college lifestyle. Close to campus and entertainment.",
       "price": "$800/month (per bed)",
       "status": "rent",
@@ -49,8 +49,8 @@
     },
     {
       "id": 5,
-      "estate_title": "Senior Living Community",
-      "segment_name": "Residential",
+      "estate_title": "Tranquil Senior Living Community",
+      "segment_name": "Senior Living Community",
       "description": "A community designed for seniors, offering independent living with supportive services. Peaceful surroundings and social activities.",
       "price": "$3,000/month",
       "status": "rent",
@@ -61,8 +61,8 @@
     },
     {
       "id": 6,
-      "estate_title": "Vacation Rental",
-      "segment_name": "Residential",
+      "estate_title": "Relaxing Beachfront Vacation Rental",
+      "segment_name": "Vacation Rental",
       "description": "Escape to this vacation rental for a relaxing getaway. Fully furnished and equipped for your comfort.",
       "price": "$250/night",
       "status": "rent",

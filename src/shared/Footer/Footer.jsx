@@ -1,81 +1,83 @@
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo-one.png";
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y bg-gray-900 mt-10 text-gray-100">
+    <footer className="px-4 divide-y  bg-gray-900 mt-10 text-gray-100">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="md:ml-10 flex justify-center">
-        <h2 className="text-3xl font-bold">
-              House <span className="text-secondary">Hold</span>
-            </h2>
+        <Link to="/">
+        <img className="w-20 md:w-28" src={logo} alt="" />
+        </Link>
         </div>
-        <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 md:mx-0 mx-auto text-sm gap-x-5 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-gray-50">Product</h3>
+            <h3 className="tracking-wide uppercase text-secondary font-medium">Product</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Features
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Integrations
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Pricing
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   FAQ
                 </a>
               </li>
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-gray-50">Company</h3>
+            <h3 className="tracking-wide uppercase text-secondary font-medium">Company</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Privacy
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Terms of Service
                 </a>
               </li>
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="uppercase text-gray-50">Developers</h3>
+            <h3 className="uppercase text-secondary font-medium">Developers</h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Public API
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Documentation
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" className="hover:text-secondary" href="#">
                   Guides
                 </a>
               </li>
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase text-gray-50">Social media</div>
+            <div className="uppercase text-secondary font-medium">Social media</div>
             <div className="flex justify-start space-x-3">
               <a
                 rel="noopener noreferrer"
                 href="#"
                 title="Facebook"
-                className="flex items-center p-1"
+                className="flex items-center hover:text-secondary p-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +92,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Twitter"
-                className="flex items-center p-1"
+                className="flex items-center hover:text-secondary p-1"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -104,7 +106,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Instagram"
-                className="flex items-center p-1"
+                className="flex items-center p-1 hover:text-secondary"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

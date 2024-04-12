@@ -53,9 +53,11 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
+ 
   //user observer
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
       setUser(currentUser);
       setLoading(false);
     });
@@ -72,7 +74,9 @@ const AuthProvider = ({ children }) => {
     updateProfileInfo,
     googleLogin,
     loading,
-    githubLogin
+    githubLogin,
+    setLoading,
+    setUser
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
