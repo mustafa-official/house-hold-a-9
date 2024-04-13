@@ -188,7 +188,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-        <button className="block w-full font-bold p-3 text-center rounded-sm  bg-secondary">
+        <button className="block w-full font-bold p-3 text-center rounded-sm  bg-[#FF26A2]">
           Register
         </button>
         {error && <small className="text-red-600">{error}</small>}

@@ -64,7 +64,7 @@ const Login = () => {
             </a>
           </div>
         </div>
-        <button className="block w-full p-3 font-bold text-center rounded-sm  bg-secondary">
+        <button className="block w-full p-3 font-bold text-center rounded-sm  bg-[#FF26A2]">
           Login
         </button>
       </form>

@@ -69,7 +69,7 @@ const ViewDetails = () => {
 
       <div className="flex flex-col justify-center p-6 rounded-sm lg:text-left">
         <h1 className="text-2xl flex items-center font-bold leading-none lg:text-3xl">
-          {estate_title} (<p className="text-secondary animate__animated animate__bounce animate__delay-1s">{status}</p>)
+          {estate_title} (<p className="text-[#ff26a2] animate__animated animate__bounce animate__delay-1s">{status}</p>)
         </h1>
         <p className="mt-3">{description}</p>
         <hr className="my-3" />
@@ -89,7 +89,7 @@ const ViewDetails = () => {
             <p
               size="sm"
               key={idx}
-              className="text-secondary border font-bold px-4 border-secondary rounded-md"
+              className="text-[#ff26a2] border font-bold px-4 border-[#ff26a2] rounded-md"
             >
               {facility}
             </p>

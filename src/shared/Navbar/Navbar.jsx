@@ -10,10 +10,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar container px-0 lg:px-10 mx-auto md:mt-2">
+      <div className="navbar lg:px-14 mx-auto md:mt-2">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn md:ml-5 btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -35,11 +35,11 @@ const Navbar = () => {
             >
               <div className="flex lg:justify-normal justify-center lg:flex-row flex-col lg:mt-0 mt-4 items-center gap-3">
                 <NavLink
-                  style={{ padding: "5px 12px" }}
+                  style={{ padding: "2px 12px" }}
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? "border border-secondary rounded-md text-secondary font-bold"
+                      ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
                       : ""
                   }
                 >
@@ -47,11 +47,11 @@ const Navbar = () => {
                 </NavLink>
                 {user && (
                   <NavLink
-                    style={{ padding: "5px 12px" }}
+                    style={{ padding: "2px 12px" }}
                     to="/profile"
                     className={({ isActive }) =>
                       isActive
-                        ? "border border-secondary rounded-md text-secondary font-bold"
+                        ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
                         : ""
                     }
                   >
@@ -64,11 +64,11 @@ const Navbar = () => {
                   <>
                     {user && (
                       <NavLink
-                        style={{ padding: "5px 12px" }}
+                        style={{ padding: "2px 12px" }}
                         to="/book-now"
                         className={({ isActive }) =>
                           isActive
-                            ? "border border-secondary rounded-md text-secondary font-bold"
+                            ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
                             : ""
                         }
                       >
@@ -89,11 +89,11 @@ const Navbar = () => {
           <div className="">
             <div className="flex lg:justify-normal justify-center lg:flex-row flex-col lg:mt-0 mt-4 items-center gap-3">
               <NavLink
-                style={{ padding: "5px 12px" }}
+                style={{ padding: "2px 12px" }}
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "border border-secondary rounded-md text-secondary font-bold"
+                    ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
                     : ""
                 }
               >
@@ -101,11 +101,11 @@ const Navbar = () => {
               </NavLink>
               {user && (
                 <NavLink
-                  style={{ padding: "5px 12px" }}
+                  style={{ padding: "2px 12px" }}
                   to="/profile"
                   className={({ isActive }) =>
                     isActive
-                      ? "border border-secondary rounded-md text-secondary font-bold"
+                      ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
                       : ""
                   }
                 >
@@ -118,11 +118,11 @@ const Navbar = () => {
                 <>
                   {user && (
                     <NavLink
-                      style={{ padding: "5px 12px" }}
+                      style={{ padding: "2px 12px" }}
                       to="/book-now"
                       className={({ isActive }) =>
                         isActive
-                          ? "border border-secondary rounded-md text-secondary font-bold"
+                          ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
                           : ""
                       }
                     >
@@ -155,7 +155,7 @@ const Navbar = () => {
               {user ? (
                 <>
                   <Button
-                    className="bg-secondary font-grotesk"
+                    className="bg-[#FF26A2] font-grotesk"
                     onClick={logOutUser}
                     style={{
                       textTransform: "capitalize",
@@ -170,7 +170,7 @@ const Navbar = () => {
                 <>
                   <Link to="/login">
                     <Button
-                      className="bg-secondary font-grotesk"
+                      className="bg-[#FF26A2] font-grotesk"
                       style={{
                         textTransform: "capitalize",
                         fontSize: "16px",
