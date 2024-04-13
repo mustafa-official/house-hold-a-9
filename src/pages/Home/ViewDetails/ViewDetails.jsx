@@ -34,7 +34,7 @@ const ViewDetails = () => {
   const allFacilities = facilities || [];
 
   return (
-    <section className="pt-3 ">
+    <section className="pt-3 text-white">
       <Helmet>
       <title>House Hold - {`${estate_title}`}</title>
       </Helmet>
@@ -72,17 +72,17 @@ const ViewDetails = () => {
           {estate_title} (<p className="text-[#ff26a2] animate__animated animate__bounce animate__delay-1s">{status}</p>)
         </h1>
         <p className="mt-3">{description}</p>
-        <hr className="my-3" />
+        <hr className="my-3 border-[#888888]" />
         <p className="text-[18px]">Price: {price}</p>
-        <hr className="my-3" />
+        <hr className="my-3 border-[#888888]" />
         <p className="text-lg">
           Area: <span className="font-bold">{area}</span>
         </p>
-        <hr className="my-3" />
+        <hr className="my-3 border-[#888888]" />
         <p className="text-lg">
           Location: <span className="font-bold">{location}</span>
         </p>
-        <hr className="my-3" />
+        <hr className="my-3 border-[#888888]" />
         <div className="flex flex-wrap items-center gap-4">
           <h2 className="font-bold">Facilities:</h2>
           {allFacilities.map((facility, idx) => (

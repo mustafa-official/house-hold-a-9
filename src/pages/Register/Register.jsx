@@ -131,7 +131,7 @@ const Register = () => {
     //   </div>
     // </div>
 
-    <div className="w-full mx-auto max-w-md p-8 mt-6 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+    <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#c2227d] text-gray-100">
       <Helmet>
       <title>House Hold - Register</title>
       </Helmet>

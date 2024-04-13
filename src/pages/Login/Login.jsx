@@ -8,7 +8,7 @@ const Login = () => {
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -35,7 +35,7 @@ const Login = () => {
     toast.success("Login Successfully");
   };
   return (
-    <div className="w-full mx-auto max-w-md p-8 mt-6 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+    <div className="w-full mx-auto max-w-md mt-8 lg:mt-6 px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#c2227d] text-gray-100">
       <Helmet>
       <title>House Hold - Login</title>
       </Helmet>
@@ -70,7 +70,7 @@ const Login = () => {
       </form>
       <div className="flex items-center pt-4 space-x-1">
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
-        <p className="px-3 text-sm text-gray-400">Login with</p>
+        <p className="px-3 text-sm text-gray-400">Or</p>
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
       </div>
       <div className="flex justify-center space-x-4">

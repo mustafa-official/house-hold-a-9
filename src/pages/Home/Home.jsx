@@ -10,7 +10,7 @@ const Home = () => {
   const allData = useLoaderData();
 
   return (
-    <div>
+    <div className=" text-white">
       <Helmet>
       <title>House Hold</title>
       </Helmet>
@@ -18,11 +18,11 @@ const Home = () => {
         <Banner></Banner>
       </div>
       <div>
-        <h2 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl md:text-5xl font-black text-center mt-10 mb-4 md:mb-8 md:mt-12 text-gray-900">
+        <h2 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl md:text-5xl font-black text-center mt-10 mb-4 md:mb-8 md:mt-12 text-white">
           Our Item
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
+        <div className="grid grid-cols-1  p-5 md:grid-cols-2 lg:grid-cols-3  gap-5 ">
           {allData.map((data) => (
             <SingleEstate key={data.id} data={data}></SingleEstate>
           ))}
