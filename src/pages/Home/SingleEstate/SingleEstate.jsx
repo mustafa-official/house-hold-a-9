@@ -1,22 +1,38 @@
 import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+import 'animate.css';
 const SingleEstate = ({ data }) => {
-  const { image, segment_name, status, location, price, id } = data;
+  const {
+    image,
+    segment_name,
+    status,
+    location,
+    price,
+    id,
+    animation,
+    duration,
+    delay
+
+  
+  } = data;
+
   return (
-    <div className="flex hover:shadow-md-purple flex-col p-4 space-y-6 overflow-hidden h-full  border-2 hover:border-[#ff26a2] border-gray-300 rounded-md  dark:bg-gray-50 dark:text-gray-800">
-      <div>
+    <div data-aos-easing="ease"  data-aos={animation} data-aos-delay={delay} data-aos-duration={duration}  className="flex  hover:shadow-md-purple flex-col p-4 space-y-6  h-full  border-2 hover:border-[#ff26a2] border-gray-300 rounded-md  dark:bg-gray-50 dark:text-gray-800">
+      <div className="flex-grow">
         <div className="rounded-lg">
           <img
             src={image}
             alt=""
-            className="object-cover rounded-md  hover:scale-105 transition-all  w-full mb-4 h-auto md:h-52 lg:h-52 mx-auto"
+            className="object-cover rounded-md  hover:scale-105 transition-all  w-full mb-4 h-52 md:h-60 mx-auto"
           />
         </div>
 
-        <h2 className="mb-1 text-xl flex-grow font-bold">{segment_name}</h2>
-        <p className="text-[16px] flex items-center gap-1 dark:text-gray-600">
+        <h2 className="mb-1 text-xl font-bold">{segment_name}</h2>
+        <p className="text-[16px]  flex items-center gap-1 dark:text-gray-600">
           <SlLocationPin className="text-[16px]"></SlLocationPin> {location}
         </p>
       </div>
@@ -27,14 +43,13 @@ const SingleEstate = ({ data }) => {
         </div>
         <div className="flex items-center gap-2 dark:text-gray-600">
           <div className="flex items-center gap-2">
-            
             <p className="font-medium">{price}</p>
           </div>
         </div>
       </div>
       <div>
         <Link
-         to={`/view-details/${id}`}
+          to={`/view-details/${id}`}
           className="px-5 text-center py-2.5 relative rounded group font-medium w-full text-white  inline-block"
         >
           <span className="absolute top-0 left-0 w-full h-full rounded opacity-60 filter blur-sm bg-gradient-to-br from-[#FF26A2] to-gray-900"></span>
