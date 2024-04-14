@@ -37,11 +37,8 @@ const Profile = () => {
   return (
     <div>
       <Helmet>
-        <title>House Hold - Update Profile</title>
+        <title>House Hold | Update Profile</title>
       </Helmet>
-
-      
-
 
       <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-4 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#c2227d] text-gray-100">
         <form
@@ -49,7 +46,9 @@ const Profile = () => {
           className="py-6 flex flex-col gap-6 lg:py-12"
         >
           <div className="space-y-1 text-sm">
-            <label>Name <small>(Edit)</small></label>
+            <label>
+              Name <small>(Edit)</small>
+            </label>
             <input
               name="name"
               type="text"
@@ -59,7 +58,7 @@ const Profile = () => {
             />
           </div>
           <div className="space-y-1 text-sm">
-          <label>Email</label>
+            <label>Email</label>
             <input
               type="email"
               name="email"
@@ -70,7 +69,9 @@ const Profile = () => {
             />
           </div>
           <div className="space-y-1 text-sm">
-          <label>Photo URL <small>(Edit)</small></label>
+            <label>
+              Photo URL <small>(Edit)</small>
+            </label>
             <input
               name="photo"
               type="text"

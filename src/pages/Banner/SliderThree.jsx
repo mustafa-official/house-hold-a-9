@@ -1,5 +1,7 @@
 import bannerThree from "../../assets/banner-three.jpg";
-import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const SliderThree = () => {
   return (
     <div
@@ -9,7 +11,7 @@ const SliderThree = () => {
       <div className="hero-overlay bg-opacity-60 rounded-2xl"></div>
       <div className="hero-content text-center text-neutral-content">
       <div className="max-w-xl">
-          <h1 className="mb-5 px-3 text-3xl md:text-5xl lg:text-6xl font-black animate__animated animate__backInRight animate__slow">Discover Your Ideal Residence</h1>
+          <h1 data-aos="fade-down" data-aos-duration="2000" className="mb-5 px-3 text-3xl md:text-5xl lg:text-6xl font-black">Discover Your Ideal Residence</h1>
           <p className="mb-5 px-4 flex-wrap text-[18px] lg:text-xl">
           Experience deluxe living in this stunning villa. With spacious rooms, beautiful landscaping.
           </p>

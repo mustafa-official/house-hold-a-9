@@ -5,7 +5,8 @@ import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 const Login = () => {
-  const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+  const { loginUser, googleLogin, githubLogin, user, setUser } =
+    useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -14,30 +15,33 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
-      .then((result) => {
+      .then(() => {
         navigate(location.state ? location.state : "/");
         toast.success("Login Successfully");
-        console.log(result.user);
+        // console.log(result.user);
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error("Password doesn't match");
-        console.log(error.code);
+        // console.log(error.code);
       });
   };
   const handleGoogleLogin = () => {
-    googleLogin();
-    navigate(location.state ? location.state : "/");
-    toast.success("Login Successfully");
+    googleLogin().then((result) => {
+      setUser(...user, result.photoURL);
+      navigate(location.state ? location.state : "/");
+      toast.success("Login Successfully");
+    });
   };
   const handleGithubLogin = () => {
-    githubLogin();
-    navigate(location.state ? location.state : "/");
-    toast.success("Login Successfully");
+    githubLogin().then(() => {
+      navigate(location.state ? location.state : "/");
+      toast.success("Login Successfully");
+    });
   };
   return (
     <div className="w-full mx-auto max-w-md mt-8 lg:mt-6 px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#c2227d] text-gray-100">
       <Helmet>
-      <title>House Hold - Login</title>
+        <title>House Hold | Login</title>
       </Helmet>
       <h1 className="text-2xl font-bold text-center mb-12">Login</h1>
       <form onSubmit={handleLogin} className="space-y-6">

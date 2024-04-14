@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
 import { GoogleAuthProvider } from "firebase/auth";
-import { GithubAuthProvider } from "firebase/auth"
+import { GithubAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext();
 
@@ -19,8 +19,6 @@ const AuthProvider = ({ children }) => {
   const githubProvider = new GithubAuthProvider();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(loading);
-  console.log(!!user);
 
   //create user
   const registerUser = (email, password) => {
@@ -55,15 +53,14 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
- 
+
   //user observer
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      
-      setUser(currentUser);
+    const unSubscribe = onAuthStateChanged(auth, (CurrentUser) => {
       setLoading(false);
+      setUser(CurrentUser);
     });
-    
+
     return () => {
       unSubscribe();
     };
@@ -78,7 +75,7 @@ const AuthProvider = ({ children }) => {
     loading,
     githubLogin,
     setLoading,
-    setUser
+    setUser,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo-one.png";
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y  bg-[#2c2b2b]  text-gray-100">
-      <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-        <div className="md:ml-10 flex justify-center">
+    <footer className="divide-y  bg-[#2c2b2b]  text-gray-100">
+      <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
+        <div className="mx-auto flex justify-center">
         <Link to="/">
         <img className="w-20 md:w-28" src={logo} alt="" />
         </Link>
         </div>
-        <div className="grid grid-cols-2 md:mx-0 mx-auto text-sm gap-x-5 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-5 mx-auto text-sm gap-y-5 lg:gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
             <h3 className="tracking-wide uppercase text-[#ff26a2] font-medium">Product</h3>
             <ul className="space-y-1">

@@ -1,17 +1,24 @@
 import messsage from "../../assets/message-us.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { Helmet } from "react-helmet-async";
+AOS.init();
 const BookNow = () => {
   return (
-    <div className="grid max-w-screen-2xl grid-cols-1 items-center gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32  text-white">
-      <div className="flex flex-col  justify-between">
+    <div className="grid max-w-screen-2xl grid-cols-1 items-center gap-4 lg:gap-8 py-10 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32  text-white">
+      <Helmet>
+        <title>House Hold | Contact Us</title>
+      </Helmet>
+      <div  className="flex flex-col  justify-between">
         <div className="space-y-1">
           <h2 className="text-3xl font-bold leading-tight lg:text-5xl">
             Lets talk!
           </h2>
           <div className="text-gray-400">Any issue? Dont panic about that, Message us now! </div>
         </div>
-        <img src={messsage} className="w-80" />
+        <img data-aos="fade-down" data-aos-duration="1000"  data-aos-easing="ease-in" src={messsage} className="w-80" />
       </div>
-      <form noValidate="" className="space-y-4">
+      <form data-aos="fade-up" data-aos-duration="1000"  data-aos-easing="ease-in" className="space-y-4">
         <div>
           <label htmlFor="name" className="text-sm">
             Full name
