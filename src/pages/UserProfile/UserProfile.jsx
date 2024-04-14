@@ -16,6 +16,7 @@ const UserProfile = () => {
             <h2 className="text-xl font-bold animate-text bg-gradient-to-r from-[#c2227d] via-purple-600 to-orange-600 bg-clip-text text-transparent">{user?.displayName}</h2>
             <h2 className="md:text-[14px] mt-3">{user?.email}</h2>
             <a
+            target="_blank"
               href={user?.photoURL}
               className="md:text-[14px] flex justify-center hover:underline hover:text-[#c2227d]"
             >

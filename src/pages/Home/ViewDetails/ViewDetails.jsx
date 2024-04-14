@@ -45,23 +45,23 @@ const ViewDetails = () => {
         />
         <img
           alt=""
-          className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square"
+          className="w-full h-full rounded shadow-sm lg:min-h-48  aspect-square"
           src={sampleOne}
         />
 
         <img
           alt=""
-          className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square"
+          className="w-full h-dull rounded shadow-sm lg:min-h-48  aspect-square"
           src={sampleTwo}
         />
         <img
           alt=""
-          className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square"
+          className="w-full h-full rounded shadow-sm lg:min-h-48 aspect-square bg-gray-500"
           src={image}
         />
         <img
           alt=""
-          className="w-full h-full rounded shadow-sm min-h-48 bg-gray-500 aspect-square"
+          className="w-full h-full rounded shadow-sm lg:min-h-48  aspect-square"
           src={sampleThree}
         />
       </div>
@@ -71,21 +71,21 @@ const ViewDetails = () => {
           <p data-aos="zoom-in-right" data-aos-duration="1000">{estate_title}</p>
           <p data-aos="zoom-out-down" data-aos-delay="300" data-aos-duration="1000" className="text-[#ff26a2] text-[16px] lg:text-xl">({status?.toUpperCase()})</p>
         </h1>
-        <p className="mt-3">{description}</p>
+        <p className="mt-3 text-[15px] lg:text-[18px]">{description}</p>
         <hr className="my-6 border-[#888888]" />
 
         <div className="flex items-center gap-5 lg:gap-10">
           <div className="space-y-4">
-            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Segment:</p>
-            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Area:</p>
-            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Location:</p>
-            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Price:</p>
+            <p className="text-[16px] lg:text-[18px]">Segment:</p>
+            <p className="text-[16px] lg:text-[18px]">Area:</p>
+            <p className="text-[16px] lg:text-[18px]">Location:</p>
+            <p className="text-[16px] lg:text-[18px]">Price:</p>
           </div>
           <div className="space-y-4 flex-wrap">
-            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{segment_name}</p>
-            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{area}</p>
-            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{location}</p>
-            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{price}</p>
+            <p className="text-[16px] lg:text-[18px]">{segment_name}</p>
+            <p className="text-[16px] lg:text-[18px]">{area}</p>
+            <p className="text-[16px] lg:text-[18px]">{location}</p>
+            <p className="text-[16px] lg:text-[18px]">{price}</p>
           </div>
         </div>
         <hr className="my-6 border-[#888888]" />

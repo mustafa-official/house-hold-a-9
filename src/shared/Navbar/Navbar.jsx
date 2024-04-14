@@ -6,7 +6,7 @@ import defaultUser from "../../assets/user-one.jpg";
 import { Tooltip } from "@material-tailwind/react";
 import logo from "../../assets/logo-one.png";
 const Navbar = () => {
-  const { logOutUser, user, loading } = useContext(AuthContext);
+  const { logOutUser, user } = useContext(AuthContext);
 
   return (
     <div>
@@ -52,7 +52,6 @@ const Navbar = () => {
                 </NavLink>
                 {user && (
                   <NavLink
-                  
                     style={{ padding: "2px 12px" }}
                     to="/profile"
                     className={({ isActive }) =>
@@ -64,25 +63,32 @@ const Navbar = () => {
                     Update Profile
                   </NavLink>
                 )}
-                {loading ? (
-                  <span className="loading loading-spinner loading-md"></span>
-                ) : (
-                  <>
-                    {user && (
-                      <NavLink
-                      
-                        style={{ padding: "2px 12px" }}
-                        to="/book-now"
-                        className={({ isActive }) =>
-                          isActive
-                            ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
-                            : ""
-                        }
-                      >
-                        Book Now
-                      </NavLink>
-                    )}
-                  </>
+
+                {user && (
+                  <NavLink
+                    style={{ padding: "2px 12px" }}
+                    to="/my-profile"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
+                        : ""
+                    }
+                  >
+                    Profile
+                  </NavLink>
+                )}
+                {user && (
+                  <NavLink
+                    style={{ padding: "2px 12px" }}
+                    to="/book-now"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
+                        : ""
+                    }
+                  >
+                    Contact Us
+                  </NavLink>
                 )}
               </div>
             </ul>
@@ -108,7 +114,6 @@ const Navbar = () => {
               </NavLink>
               {user && (
                 <NavLink
-                
                   style={{ padding: "2px 12px" }}
                   to="/profile"
                   className={({ isActive }) =>
@@ -123,21 +128,6 @@ const Navbar = () => {
 
               {user && (
                 <NavLink
-                
-                  style={{ padding: "2px 12px" }}
-                  to="/book-now"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
-                      : ""
-                  }
-                >
-                  Book Now
-                </NavLink>
-              )}
-              {user && (
-                <NavLink
-               
                   style={{ padding: "2px 12px" }}
                   to="/my-profile"
                   className={({ isActive }) =>
@@ -149,15 +139,32 @@ const Navbar = () => {
                   Profile
                 </NavLink>
               )}
+              {user && (
+                <NavLink
+                  style={{ padding: "2px 12px" }}
+                  to="/book-now"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
+                      : ""
+                  }
+                >
+                  Contact Us
+                </NavLink>
+              )}
             </div>
           </div>
         </div>
         <div className="navbar-end pr-6 lg:pr-0">
           <div className="flex items-center gap-3 lg:flex">
-            {user &&  (
+            {user && (
               <div className="avatar">
                 <div className={`w-12 rounded-full border-2 border-[#FF26A2]`}>
-                  <Tooltip className="bg-[#FF26A2] font-bold" content={user.displayName}  placement="bottom">
+                  <Tooltip
+                    className="bg-[#FF26A2] font-bold"
+                    content={user.displayName}
+                    placement="bottom"
+                  >
                     <span>
                       <img src={user ? user.photoURL : defaultUser} />
                     </span>
