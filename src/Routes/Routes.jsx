@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ViewDetails from "../pages/Home/ViewDetails/ViewDetails";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import BookNow from "../pages/BookNow/BookNow";
+import UserProfile from "../pages/UserProfile/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/book-now",
         element: <PrivateRoute><BookNow></BookNow></PrivateRoute>
+      },
+      {
+        path: "/my-profile",
+        element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
       }
     ],
   },

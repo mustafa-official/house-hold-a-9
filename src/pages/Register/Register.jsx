@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
@@ -8,7 +8,9 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
-  const { registerUser, updateProfileInfo } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { registerUser, updateProfileInfo } =
+    useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -30,9 +32,12 @@ const Register = () => {
     registerUser(email, password)
       .then((result) => {
         toast.success("Registered Successfully !");
+        navigate("/");
         console.log(result.user);
         updateProfileInfo(name, photo)
-          .then(() => console.log("profile updated"))
+          .then(() => {
+            console.log("profile updated");
+          })
           .catch((error) => console.log(error));
       })
       .catch((error) => {
@@ -133,7 +138,7 @@ const Register = () => {
 
     <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#c2227d] text-gray-100">
       <Helmet>
-      <title>House Hold - Register</title>
+        <title>House Hold - Register</title>
       </Helmet>
       <h1 className="text-2xl font-bold text-center mb-12">Register</h1>
       <form onSubmit={handleRegister} className="space-y-6">
@@ -159,7 +164,6 @@ const Register = () => {
           <input
             type="text"
             name="photo"
-           
             placeholder="Photo URL"
             className="w-full px-4 py-3 rounded-md border bg-gray-900 text-gray-100"
           />
@@ -174,17 +178,17 @@ const Register = () => {
               className="w-full  px-4 py-3 rounded-md border bg-gray-900 text-gray-100"
             />
             <div className="absolute top-[50%] right-0 translate-x-[-50%] translate-y-[-50%]">
-            {showPassword ? (
-              <IoIosEyeOff
-                onClick={handleShowPassword}
-                className="text-2xl cursor-pointer"
-              ></IoIosEyeOff>
-            ) : (
-              <IoIosEye
-                onClick={handleShowPassword}
-                className="text-2xl cursor-pointer"
-              ></IoIosEye>
-            )}
+              {showPassword ? (
+                <IoIosEyeOff
+                  onClick={handleShowPassword}
+                  className="text-2xl cursor-pointer"
+                ></IoIosEyeOff>
+              ) : (
+                <IoIosEye
+                  onClick={handleShowPassword}
+                  className="text-2xl cursor-pointer"
+                ></IoIosEye>
+              )}
             </div>
           </div>
         </div>

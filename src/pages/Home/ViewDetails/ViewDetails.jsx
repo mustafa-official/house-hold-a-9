@@ -3,14 +3,13 @@ import sampleTwo from "../../../assets/banner-two.jpg";
 import sampleThree from "../../../assets/banner-three.jpg";
 import { useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import 'animate.css';
+import "animate.css";
 import { Helmet } from "react-helmet-async";
 
 const ViewDetails = () => {
   const allData = useLoaderData();
   const [selected, setSelected] = useState({});
   const { id } = useParams();
-
 
   useEffect(() => {
     const filteredData = allData.find((data) => data.id == id);
@@ -22,7 +21,7 @@ const ViewDetails = () => {
   const {
     price,
     estate_title,
-
+    segment_name,
     description,
     status,
     area,
@@ -36,7 +35,7 @@ const ViewDetails = () => {
   return (
     <section className="pt-3 text-white">
       <Helmet>
-      <title>House Hold - {`${estate_title}`}</title>
+        <title>House Hold - {`${estate_title}`}</title>
       </Helmet>
       <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
         <img
@@ -68,28 +67,39 @@ const ViewDetails = () => {
       </div>
 
       <div className="flex flex-col justify-center p-6 rounded-sm lg:text-left">
-        <h1 className="text-2xl flex items-center font-bold leading-none lg:text-3xl">
-          {estate_title} (<p className="text-[#ff26a2] animate__animated animate__bounce animate__delay-1s">{status}</p>)
+        <h1 className="text-xl leading-normal flex items-center gap-2 font-medium lg:text-3xl">
+          <p data-aos="zoom-in-right" data-aos-duration="1000">{estate_title}</p>
+          <p data-aos="zoom-out-down" data-aos-delay="300" data-aos-duration="1000" className="text-[#ff26a2] text-[16px] lg:text-xl">({status?.toUpperCase()})</p>
         </h1>
         <p className="mt-3">{description}</p>
-        <hr className="my-3 border-[#888888]" />
-        <p className="text-[18px]">Price: {price}</p>
-        <hr className="my-3 border-[#888888]" />
-        <p className="text-lg">
-          Area: <span className="font-bold">{area}</span>
-        </p>
-        <hr className="my-3 border-[#888888]" />
-        <p className="text-lg">
-          Location: <span className="font-bold">{location}</span>
-        </p>
-        <hr className="my-3 border-[#888888]" />
-        <div className="flex flex-wrap items-center gap-4">
-          <h2 className="font-bold">Facilities:</h2>
+        <hr className="my-6 border-[#888888]" />
+
+        <div className="flex items-center gap-5 lg:gap-10">
+          <div className="space-y-4">
+            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Segment:</p>
+            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Area:</p>
+            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Location:</p>
+            <p data-aos="zoom-in-right" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">Price:</p>
+          </div>
+          <div className="space-y-4 flex-wrap">
+            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{segment_name}</p>
+            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{area}</p>
+            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{location}</p>
+            <p data-aos="zoom-in-left" data-aos-delay="600" data-aos-duration="1000" className="text-[16px] lg:text-[18px]">{price}</p>
+          </div>
+        </div>
+        <hr className="my-6 border-[#888888]" />
+        
+        <div className="flex flex-wrap items-center gap-6 lg:gap-8 text-[18px]">
+          <h2 className="text-[18px]">Facilities:</h2>
           {allFacilities.map((facility, idx) => (
             <p
+            data-aos="flip-left"
+            data-aos-delay="100"
+            data-aos-duration="2500"
               size="sm"
               key={idx}
-              className="text-[#ff26a2] border font-bold px-4 border-[#ff26a2] rounded-md"
+              className="text-text-white hover:text-[#ff26a2] transition-all hover:border-white border px-4 py-1 lg:px-5 border-[#ff26a2] rounded-md"
             >
               {facility}
             </p>

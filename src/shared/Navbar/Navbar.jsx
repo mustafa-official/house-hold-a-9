@@ -7,7 +7,7 @@ import { Tooltip } from "@material-tailwind/react";
 import logo from "../../assets/logo-one.png";
 const Navbar = () => {
   const { logOutUser, user, loading } = useContext(AuthContext);
-// console.log(loading)
+
   return (
     <div>
       <div className="navbar pt-6 lg:px-14 bg-[#212428] text-white mx-auto">
@@ -52,6 +52,7 @@ const Navbar = () => {
                 </NavLink>
                 {user && (
                   <NavLink
+                  
                     style={{ padding: "2px 12px" }}
                     to="/profile"
                     className={({ isActive }) =>
@@ -69,6 +70,7 @@ const Navbar = () => {
                   <>
                     {user && (
                       <NavLink
+                      
                         style={{ padding: "2px 12px" }}
                         to="/book-now"
                         className={({ isActive }) =>
@@ -106,6 +108,7 @@ const Navbar = () => {
               </NavLink>
               {user && (
                 <NavLink
+                
                   style={{ padding: "2px 12px" }}
                   to="/profile"
                   className={({ isActive }) =>
@@ -120,6 +123,7 @@ const Navbar = () => {
 
               {user && (
                 <NavLink
+                
                   style={{ padding: "2px 12px" }}
                   to="/book-now"
                   className={({ isActive }) =>
@@ -131,17 +135,31 @@ const Navbar = () => {
                   Book Now
                 </NavLink>
               )}
+              {user && (
+                <NavLink
+               
+                  style={{ padding: "2px 12px" }}
+                  to="/my-profile"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "border border-[#FF26A2] rounded-md text-[#FF26A2] font-bold"
+                      : ""
+                  }
+                >
+                  Profile
+                </NavLink>
+              )}
             </div>
           </div>
         </div>
         <div className="navbar-end pr-6 lg:pr-0">
-          <div className="flex items-center gap-5 lg:flex">
-            {user && (
+          <div className="flex items-center gap-3 lg:flex">
+            {user &&  (
               <div className="avatar">
-                <div className={`w-12 rounded-full `}>
+                <div className={`w-12 rounded-full border-2 border-[#FF26A2]`}>
                   <Tooltip className="bg-[#FF26A2] font-bold" content={user.displayName}  placement="bottom">
                     <span>
-                      <img src={user ? user.photoURL : defaultUser} alt="" />
+                      <img src={user ? user.photoURL : defaultUser} />
                     </span>
                   </Tooltip>
                 </div>
