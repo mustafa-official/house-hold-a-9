@@ -166,7 +166,7 @@ const Navbar = () => {
                     placement="bottom"
                   >
                     <span>
-                      <img src={user ? user.photoURL : defaultUser} />
+                      <img src={user?.photoURL ? user?.photoURL : defaultUser}  />
                     </span>
                   </Tooltip>
                 </div>

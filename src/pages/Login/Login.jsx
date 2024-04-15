@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ const Login = () => {
     useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-
+  console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -27,9 +27,10 @@ const Login = () => {
   };
   const handleGoogleLogin = () => {
     googleLogin().then((result) => {
-      setUser(...user, result.photoURL);
-      navigate(location.state ? location.state : "/");
       toast.success("Login Successfully");
+      navigate(location.state ? location.state : "/");
+      setUser(...user, result.photoURL);
+      
     });
   };
   const handleGithubLogin = () => {
@@ -112,6 +113,7 @@ const Login = () => {
           Register
         </Link>
       </p>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };
