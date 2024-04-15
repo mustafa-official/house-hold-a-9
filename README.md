@@ -1,8 +1,16 @@
-# React + Vite
+# House Hold
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website: https://house-hold-auth.firebaseapp.com/
 
-Currently, two official plugins are available:
+## Core features and characteristics of this Website
+- User-Friendly Interface.
+- When you register then you can see details information from our item.
+- Responsive for all devices.
+- Need any information or facing any issue after register then directly contact from Contact Us page.
+- You can update your Name and Photo after Register or Login.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Here package name that I have used
+- 1. AOS Package
+- 2. Animate.css
+- 3. Swiper slider
+
