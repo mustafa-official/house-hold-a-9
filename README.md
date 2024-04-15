@@ -10,7 +10,7 @@ Website: https://house-hold-auth.firebaseapp.com/
 - You can update your Name and Photo after Register or Login.
 
 ## Here package name that I have used
-- 1. AOS Package
-- 2. Animate.css
-- 3. Swiper slider
+- i.   AOS Package
+- ii.  Animate.css
+- iii. Swiper slider
 
