@@ -10,13 +10,13 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar pt-6 lg:px-14 bg-[#212428] text-white mx-auto">
+      <div className="navbar py-4 px-0 md:px-4 lg:px-12 bg-[#212428] text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="btn md:ml-5 btn-ghost lg:hidden"
+              className="btn  btn-ghost lg:hidden"
             >
               <svg
                 color="white"
@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu backdrop-blur-md menu-sm dropdown-content z-10 mt-3  p-2 border border-[#FF26A2] bg-[#ebebeb49] rounded-box min-h-[calc(100vh-88px)] w-56"
+              className="menu backdrop-blur-md menu-sm dropdown-content z-10 mt-3  p-2 border border-[#FF26A2] bg-[#ebebeb49] rounded-lg min-h-[calc(100vh-78px)] w-56"
             >
               <div className="flex lg:justify-normal justify-center lg:flex-row flex-col lg:mt-0 mt-4 items-center gap-3">
                 <NavLink
@@ -95,7 +95,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/">
-            <img className="w-20 lg:w-24" src={logo} alt="" />
+            <img className="w-[75px] md:w-20 lg:w-[90px]" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

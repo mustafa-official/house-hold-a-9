@@ -4,7 +4,10 @@
     font-family: "Space Grotesk", sans-serif;
 }
 
+body {
+    background-color: #212428;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-

@@ -14,10 +14,10 @@ const Home = () => {
       <Helmet>
       <title>House Hold</title>
       </Helmet>
-      <div className="my-3 md:my-4">
+      <div>
         <Banner></Banner>
       </div>
-      <div>
+      <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
         <h2 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl md:text-5xl font-black text-center mt-10 mb-4 md:mb-8 md:mt-12 text-white">
           Our Item
         </h2>

@@ -35,7 +35,7 @@ const Profile = () => {
   };
 
   return (
-    <div>
+    <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
       <Helmet>
         <title>House Hold | Update Profile</title>
       </Helmet>
