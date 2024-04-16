@@ -13,15 +13,13 @@ const SingleEstate = ({ data }) => {
     location,
     price,
     id,
-    animation,
-    duration,
-    delay
+  
 
   
   } = data;
 
   return (
-    <div data-aos-easing="ease"  data-aos={animation} data-aos-delay={delay} data-aos-duration={duration}  className="flex  hover:shadow-md-purple flex-col p-4 space-y-6  h-full  border-2 hover:border-[#ff26a2] border-gray-300 border-t-[#c2227d] border-l-[#c2227d]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
+    <div  className="flex  hover:shadow-md-purple flex-col p-4 space-y-6  h-full  border-2 hover:border-[#ff26a2] border-gray-300 border-t-[#c2227d] border-l-[#c2227d]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
       <div className="flex-grow">
         <div className="rounded-lg">
           <img
@@ -32,7 +30,7 @@ const SingleEstate = ({ data }) => {
         </div>
 
         <h2 className="mb-1 text-xl font-bold">{segment_name}</h2>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" className="text-[16px]   flex items-center gap-1 dark:text-gray-600">
+        <p data-aos="fade-up" data-aos-duration="1000" className="text-[16px]  flex items-center gap-1 dark:text-gray-600">
           <SlLocationPin className="text-[16px]"></SlLocationPin> {location}
         </p>
       </div>

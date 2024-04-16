@@ -37,7 +37,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu backdrop-blur-md menu-sm dropdown-content mt-3 z-[9999] p-2 border border-[#FF26A2] bg-[#ebebeb49] rounded-box min-h-[calc(100vh-88px)] w-56"
+                className="menu z-50 menu-sm bg-[#212428] dropdown-content p-2 border border-[#FF26A2] mt-4 rounded-box min-h-[calc(100vh-80px)] w-56"
               >
                 <div className="flex lg:justify-normal justify-center lg:flex-row flex-col lg:mt-0 mt-4 items-center gap-3">
                   <NavLink

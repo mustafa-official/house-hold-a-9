@@ -9,10 +9,8 @@
       "area": "2500 sq ft",
       "location": "123 Main Street, Cityville, USA",
       "facilities": ["living room", "backyard", "kitchen", "garage"],
-      "image": "https://i.ibb.co/NWXFg0H/single-family.jpg",
-      "animation": "flip-left",
-      "duration" : "1500",
-      "delay": "400"
+      "image": "https://i.ibb.co/NWXFg0H/single-family.jpg"
+      
       
     },
     {
@@ -25,10 +23,8 @@
       "area": "4000 sq ft",
       "location": "456 Park Avenue, Townsville, USA",
       "facilities": ["living room", "swimming pool", "garden", "gym"],
-      "image": "https://i.ibb.co/6yv4QCF/town-house.jpg",
-      "animation": "flip-right",
-      "duration" : "1500",
-      "delay": "400"
+      "image": "https://i.ibb.co/6yv4QCF/town-house.jpg"
+  
     },
     {
       "id": 3,
@@ -40,10 +36,8 @@
       "area": "1500 sq ft",
       "location": "789 Elm Street, Metropolis, USA",
       "facilities": ["living room", "balcony", "laundry room"],
-      "image": "https://i.ibb.co/314Xsjs/apertments.jpg",
-      "animation": "flip-left",
-      "duration" : "1500",
-      "delay": "400"
+      "image": "https://i.ibb.co/314Xsjs/apertments.jpg"
+      
       
     },
     {
@@ -56,10 +50,8 @@
       "area": "1200 sq ft",
       "location": "555 University Avenue, Collegtown, USA",
       "facilities": ["living room", "study area", "fitness center", "game room"],
-      "image": "https://i.ibb.co/fGQTpK1/student-housing.jpg",
-      "animation": "flip-right",
-      "duration" : "1500",
-      "delay": "400"
+      "image": "https://i.ibb.co/fGQTpK1/student-housing.jpg"
+      
       
     },
     {
@@ -72,10 +64,8 @@
       "area": "1800 sq ft",
       "location": "777 Oak Street, Eldertown, USA",
       "facilities": ["living room", "dining area", "library", "garden"],
-      "image": "https://i.ibb.co/30431Ks/senior.jpg",
-      "animation": "flip-left",
-      "duration" : "1500",
-      "delay": "400"
+      "image": "https://i.ibb.co/30431Ks/senior.jpg"
+     
      
     },
     {
@@ -88,10 +78,8 @@
       "area": "1500 sq ft",
       "location": "888 Beach Road, Seaside Village, USA",
       "facilities": ["living room", "patio", "beach access", "barbecue area"],
-      "image": "https://i.ibb.co/VtjSPPK/vocation.jpg",
-      "animation": "flip-right",
-      "duration" : "1500",
-      "delay": "400"
+      "image": "https://i.ibb.co/VtjSPPK/vocation.jpg"
+      
       
     }
   ]

@@ -11,6 +11,7 @@ const Banner = () => {
     <div>
       
       <Swiper
+      id="swiper-color"
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
@@ -20,6 +21,9 @@ const Banner = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        style={{
+          zIndex:0,
+        }}
       >
         <SwiperSlide>
           <SliderOne></SliderOne>
