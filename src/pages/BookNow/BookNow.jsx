@@ -2,11 +2,12 @@ import messsage from "../../assets/message-us.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Helmet } from "react-helmet-async";
+import { ScrollRestoration } from "react-router-dom";
 AOS.init();
 const BookNow = () => {
   return (
-    <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
-      <div className="grid max-w-screen-2xl grid-cols-1 items-center gap-4 lg:gap-8 py-10 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32  text-white">
+    <div className="px-5 md:px-10 md:mt-0 mt-4 lg:mt-0 lg:min-h-[calc(100vh-80px)] flex justify-center items-center lg:px-14">
+      <div className="grid max-w-screen-2xl grid-cols-1 items-center gap-4 lg:gap-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32  text-white">
         <Helmet>
           <title>House Hold | Contact Us</title>
         </Helmet>
@@ -72,6 +73,7 @@ const BookNow = () => {
           </button>
         </form>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

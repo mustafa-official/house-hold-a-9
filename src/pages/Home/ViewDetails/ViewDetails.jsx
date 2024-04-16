@@ -33,7 +33,7 @@ const ViewDetails = () => {
   const allFacilities = facilities || [];
 
   return (
-    <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
+    <div className="px-5 md:px-10 pb-8 lg:px-14">
       <section className="pt-3 text-white">
         <Helmet>
           <title>House Hold | {`${estate_title}`}</title>

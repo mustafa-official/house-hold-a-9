@@ -4,12 +4,13 @@ import { Helmet } from "react-helmet-async";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { MdOutlineMailOutline } from "react-icons/md";
 import defaultPic from "../../assets/user-one.jpg";
+import { ScrollRestoration } from "react-router-dom";
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
-      <div className="flex justify-center w-max mx-auto items-center min-h-[80vh] lg:min-h-[calc(100vh-95px)]">
+    <div className="px-5 md:px-10 lg:min-h-[calc(100vh-80px)] flex justify-center items-center lg:px-14">
+      <div className="w-max mx-auto py-10 lg:py-0 md:py-10">
         <Helmet>
           <title>House Hold | Profile</title>
         </Helmet>
@@ -17,7 +18,7 @@ const UserProfile = () => {
           <img
             src={user?.photoURL ? user?.photoURL : defaultPic}
             alt=""
-            className="w-32 border-[#c2227d] object-cover border h-32 mx-auto rounded-full  aspect-square"
+            className="w-32 border-[#c2227d] object-cover border-2 h-32 mx-auto rounded-full  aspect-square"
           />
           <div className="space-y-4 text-center divide-y divide-gray-700">
             <div className="my-2 px-3 flex flex-col items-center">
@@ -60,6 +61,7 @@ const UserProfile = () => {
           </div>
         </div>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

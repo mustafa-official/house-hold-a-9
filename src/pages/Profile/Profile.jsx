@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import "react-edit-text/dist/index.css";
+import { ScrollRestoration } from "react-router-dom";
 const Profile = () => {
   const { user, updateProfileInfo, setLoading, setUser } =
     useContext(AuthContext);
@@ -35,12 +36,12 @@ const Profile = () => {
   };
 
   return (
-    <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
+    <div className="px-5 md:px-10 lg:py-0 my-6 lg:my-0 flex justify-center items-center lg:min-h-[calc(100vh-80px)] lg:px-14">
       <Helmet>
         <title>House Hold | Update Profile</title>
       </Helmet>
 
-      <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-4 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#c2227d] text-gray-100">
+      <div className="w-full mx-auto max-w-md px-4 md:px-8 space-y-2  rounded-xl border border-[#c2227d] text-gray-100">
         <form
           onSubmit={handleUpdateProfile}
           className="py-6 flex flex-col gap-6 lg:py-12"
@@ -88,6 +89,7 @@ const Profile = () => {
           </div>
         </form>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

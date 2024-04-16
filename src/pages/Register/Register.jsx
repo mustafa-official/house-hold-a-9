@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
   const { registerUser, updateProfileInfo, setLoading } =
     useContext(AuthContext);
 
@@ -31,7 +32,6 @@ const Register = () => {
     registerUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success("Registered Successfully !");
 
         // window.location.reload();
         // navigate("/");
@@ -41,6 +41,8 @@ const Register = () => {
             console.log("profile updated");
           })
           .catch((error) => console.log(error));
+        navigate("/");
+        toast.success("Registered Successfully !");
       })
       .catch((error) => {
         setError(error.code);
@@ -123,6 +125,7 @@ const Register = () => {
           </Link>
         </p>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

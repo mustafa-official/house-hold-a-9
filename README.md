@@ -3,6 +3,8 @@
 Website: https://house-hold-auth.firebaseapp.com/
 
 ## Core features and characteristics of this Website
+- Can Register Profile
+- Login System
 - User-Friendly Interface.
 - When you register then you can see details information from our item.
 - Responsive for all devices.

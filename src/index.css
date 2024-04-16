@@ -8,6 +8,10 @@ body {
     background-color: #212428;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
