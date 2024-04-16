@@ -1,6 +1,6 @@
 # House Hold
 
-Website: https://house-hold-auth.firebaseapp.com/
+Website: https://house-hold-auth.web.app/
 
 ## Core features and characteristics of this Website
 - Can Register Profile
