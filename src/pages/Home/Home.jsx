@@ -19,7 +19,7 @@ const Home = () => {
       </div>
       <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
         <h2 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl md:text-4xl font-black text-center mt-10 mb-4 md:mb-8 md:mt-12 text-white">
-        Featured Properties
+        Featured Estate
         </h2>
         
         <div className="grid grid-cols-1 py-5 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
