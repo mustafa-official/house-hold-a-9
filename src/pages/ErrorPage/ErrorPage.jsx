@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 const ErrorPage = () => {
   return (
-    <section className="flex items-center h-screen p-16 bg-gray-900 text-gray-100">
+    <section className="flex items-center h-screen p-8 lg:p-16 bg-gray-900 text-gray-100">
       <Helmet>
       <title>Error - 404</title>
       </Helmet>
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
         <div className="max-w-md text-center">
-          <h2 className="mb-8 font-extrabold text-9xl text-gray-600">
+          <h2 className="mb-8 font-extrabold text-7xl lg:text-9xl text-gray-600">
             <span className="sr-only">Error</span>404
           </h2>
           <p className="text-2xl font-semibold md:text-3xl">
@@ -19,7 +19,7 @@ const ErrorPage = () => {
           </p>
           <Link
             to="/"
-            className="px-8 py-3 font-semibold rounded bg-secondary "
+            className="px-4 py-3 font-semibold rounded bg-[#FF26A2] "
           >
             Back to homepage
           </Link>

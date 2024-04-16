@@ -6,7 +6,7 @@ AOS.init();
 const SliderOne = () => {
   return (
     <div
-      className='hero min-h-[calc(100vh-80px)] z-10 bg-center bg-cover'
+      className='hero min-h-[calc(100vh-80px)] bg-center bg-cover '
       style={{ backgroundImage: `url(${banner})`,}}
     >
       <div className="hero-overlay bg-opacity-60"></div>
